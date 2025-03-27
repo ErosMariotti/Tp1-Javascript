@@ -1,7 +1,7 @@
 # Trabajo Práctico N° 1 – Laboratorio de Computación 4  
 
 ## Descripción  
-Este proyecto es una aplicación web desarrollada únicamente con HTML y JavaScript (sin librerías ni frameworks) que permite el inicio de sesión de usuarios, la visualización de una lista de usuarios y la gestión de su estado (bloqueado o desbloqueado).  
+Este proyecto es una aplicación web desarrollada únicamente con HTML y JavaScript que permite el inicio de sesión de usuarios, la visualización de una lista de usuarios y la gestión de su estado (bloqueado o desbloqueado).  
 
 ## Funcionalidades  
 1. **Formulario de Login (`login.html`)**  
