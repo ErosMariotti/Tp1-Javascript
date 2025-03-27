@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Lista de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="lista.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #cfcfcf, #044284);
+        }
+
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(224, 224, 224, 0.571);
+            width: 80%;
+            max-width: 1100px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #f8f8f8;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-search {
+            background: #0056b3;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 86, 179, 0.3);
+        }
+
+        .btn-search:hover {
+            background: #003f80;
+        }
+
+        .btn-block {
+            background: #fd9f8b;
+            color: white;
+        }
+
+        .btn-block:hover {
+            background: #b71c1c;
+        }
+
+        .btn-unblock {
+            background: #cef8c6;
+            color: white;
+        }
+
+        .btn-unblock:hover {
+            background: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Usuarios</h1>
+        <div class="flex justify-between mb-6">
+            <input type="text" id="searchInput" placeholder="Buscar usuario...">
+            <button onclick="searchUser()" class="btn-search">Buscar</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Bloqueado</th>
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>Bloquear</th>
+                    <th>Desbloquear</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                <!-- Acá van los datos de los usuarios. -->
+            </tbody>
+        </table>
+        <p id="noResultsMessage" style="display: none; text-align: center; color: #555; margin-top: 10px;">No se encontraron resultados.</p>
+    </div>
+</body>
+</html>
